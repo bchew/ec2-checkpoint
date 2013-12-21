@@ -38,7 +38,6 @@ ec2_conn = boto.ec2.connect_to_region(args.region, aws_access_key_id=args.access
 
 # get sg
 sg = get_ec2_sg(ec2_conn, args.sg)
-print sg
 
 if args.mode == MODE_AUTHORIZE:
   is_successful = sg.authorize(ip_protocol=args.protocol, 
