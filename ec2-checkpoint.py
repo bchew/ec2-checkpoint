@@ -55,4 +55,4 @@ elif args.mode == MODE_REVOKE:
                          cidr_ip=args.ip + "/32")
 
 if is_successful:
-  logging.info(args.ip + " access to " + args.protocol + " " + args.port + " successfully " + args.mode + "d in " + args.sg + "!")
+  logging.info(args.ip + " access to " + args.protocol + " " + args.port + " successfully " + args.mode + "d in " + args.sg + " security group!")
