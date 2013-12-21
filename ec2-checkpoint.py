@@ -34,10 +34,7 @@ if args.log != None:
 logging.basicConfig(level=getattr(logging, log_level))
 
 # instantiate connection
-if args.accessKey != None and args.secretKey != None:
-  ec2_conn = boto.ec2.connect_to_region(args.region, aws_access_key_id=args.accessKey, aws_secret_access_key=args.secretKey)
-else:
-  ec2_conn = boto.ec2.connect_to_region(args.region)
+ec2_conn = boto.ec2.connect_to_region(args.region, aws_access_key_id=args.accessKey, aws_secret_access_key=args.secretKey)
 
 # get sg
 sg = get_ec2_sg(ec2_conn, args.sg)
